@@ -1,7 +1,7 @@
-
+import { UNSPLASH_API_KEY } from '../env.js'
 
 //Getting users from jsonplaceholder
-async function getUsers () {
+export async function getUsers () {
     // Url to fetch
     const url = "https://jsonplaceholder.typicode.com/users";
 
@@ -20,9 +20,9 @@ async function getUsers () {
 }
 
 // Getting images from unsplash
-async function getImages(query = 'face') {
+export async function getImages(query = 'face') {
     // API_KEY from env.js (.gitignore´d)
-    const accessKey = API_KEY;
+    const accessKey = UNSPLASH_API_KEY;
     const url = `https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKey}`;
 
     try {

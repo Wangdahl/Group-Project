@@ -1,4 +1,4 @@
-
+import { getUsers, getImages} from './API.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const parentDiv = document.getElementById('user-box');
