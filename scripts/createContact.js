@@ -43,35 +43,35 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             //PLACEHOLDER IMG 
-            //newImg.src = '../images/profile-placeholder.jpg'
-
+            newImg.src = '../images/profile-placeholder.jpg'
+            //Adding elements to details div
+            newDiv3.appendChild(newH3);
+            newDiv3.appendChild(newH4);
+            newDiv3.appendChild(newP);
+            //Adding elements to profile div
+            newDiv2.appendChild(newImg);
+            newDiv2.appendChild(newDiv3);
+            //Adding list items to list
+            newUl.appendChild(newLi1);
+            newUl.appendChild(newLi2);
+            newUl.appendChild(newLi3);
+            //Adding list to div4
+            newDiv4.appendChild(newUl);
+            //Adding elements to contact card (base div)
+            newDiv.appendChild(newDiv2);
+            newDiv.appendChild(newButton);
+            newDiv.appendChild(newDiv4);
+            //Adding the div containing all contents to the section
+            parentDiv.appendChild(newDiv);
+            
             
             //Fetching image for profile pic 
-            getImages().then(image => {
-                newImg.src = image.urls.small;;
-                //Adding elements to details div
-                newDiv3.appendChild(newH3);
-                newDiv3.appendChild(newH4);
-                newDiv3.appendChild(newP);
-                //Adding elements to profile div
-                newDiv2.appendChild(newImg);
-                newDiv2.appendChild(newDiv3);
-                //Adding list items to list
-                newUl.appendChild(newLi1);
-                newUl.appendChild(newLi2);
-                newUl.appendChild(newLi3);
-                //Adding list to div4
-                newDiv4.appendChild(newUl);
-                //Adding elements to contact card (base div)
-                newDiv.appendChild(newDiv2);
-                newDiv.appendChild(newButton);
-                newDiv.appendChild(newDiv4);
-                //Adding the div containing all contents to the section
-                parentDiv.appendChild(newDiv);
-                
-            }).catch(error => {
-                console.error('Image fetch failed: ', error);
-            });
+            //getImages().then(image => {
+                //newImg.src = image.urls.small;;
+
+            //}).catch(error => {
+            //    console.error('Image fetch failed: ', error);
+            //});
         })
     }).catch(error => {
         console.error('User fetch failed: ', error);
