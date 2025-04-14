@@ -1,0 +1,20 @@
+@media (min-width: 800px) {
+    #user-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1086px) {
+    #user-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1300px) {
+    #user-box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
