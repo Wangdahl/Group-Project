@@ -46,5 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         profileContainer.appendChild(profilePic);
         profileContainer.appendChild(userInfo);
     });
+
+    const profileH1 = document.getElementById('profile-h1');
+    profileH1.addEventListener('click', () => {
+        window.location.href = '../index.html';
+    })
 });
 
