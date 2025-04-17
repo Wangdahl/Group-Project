@@ -2,7 +2,6 @@ import { getUsers } from "./API.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     //Parent container
-    const sidebar = document.getElementById('sidebar');
     const sidebarUl = document.getElementById('sidebarUl');
 
     getUsers().then(users => {

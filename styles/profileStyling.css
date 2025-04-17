@@ -1,5 +1,10 @@
 /* Styling for profile page */
 
+.big-profile-pic {
+    max-width: 150px;
+}
+
+/* Sidebar styling */
 .sidebar-pic {
     max-width: 45px;
     max-height: 45px;
