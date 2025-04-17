@@ -1,11 +1,84 @@
 /* Styling for profile page */
-
-.big-profile-pic {
-    max-width: 150px;
+#profile {
+    display: grid;
+    grid-template-columns: 250px auto;
+    width: 100%;
 }
 
+/* Profile header*/
+#profile-header {
+    grid-column: 1/3;
+}
+/* Introduction */
+#profile-section {
+    grid-column: 2/3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    margin: 0 1rem 1rem 4rem;
+}
+
+#profile-main {
+    grid-column-start: 2;
+}
+.big-profile-pic {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 75px;
+    margin-right: 1.5rem;
+}
+.profile-h2 {
+    margin-bottom: 0.5rem;
+}
+.profile-h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+#btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+#btn-container button {
+    width: 100px;
+}
 /* Sidebar styling */
+#sidebar {
+    position: absolute;
+    top: 25%;
+    height: 100vh;
+    align-self: center;
+    margin-left: 1rem;
+}
+#sidebar-heading {
+    margin: 1rem 0 2rem;
+}
+#sidebarUl {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sidebar-li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 0 5px lightcoral;
+    border-radius: 2rem;
+    padding: 5px;
+    cursor: pointer;
+}
 .sidebar-pic {
-    max-width: 45px;
-    max-height: 45px;
+    max-width: 40px;
+    max-height: 40px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.sidebar-name {
+    font-weight: 600;
 }

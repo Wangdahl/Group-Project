@@ -3,7 +3,7 @@ import { getUsers } from "./API.js";
 document.addEventListener('DOMContentLoaded', () => {
     //Getting user id from local storage to generate the right profile.
     const userId = localStorage.getItem('id');
-    const profileContainer = document.getElementById('profile-header');
+    const profileContainer = document.getElementById('profile-section');
     
     //Checking that user id exists
     if (!userId) {
@@ -23,25 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
         //Creating elements
         const profilePic = document.createElement('img');
         const userInfo = document.createElement('div');
-        const name = document.createElement('h1');
-        const userName = document.createElement('h2');
+        const name = document.createElement('h2');
+        const userName = document.createElement('h3');
+        const intro = document.createElement('p');
         
         //Assigning classes
         profilePic.classList.add('big-profile-pic');
-        name.classList.add('profile-h1');
-        userName.classList.add('profile-h2');
+        name.classList.add('profile-h2');
+        userName.classList.add('profile-h3');
+        intro.classList.add('introduction');
 
         //Assigning content to elements
         profilePic.src = '../images/profile-placeholder.jpg';
         name.textContent = user.name;
         userName.textContent = `@${user.username}`;
+        intro.textContent = `I work at ${user.company.name}, where our motto is "${user.company.catchPhrase}". You can reach me at ${user.email} or give me a call at ${user.phone}. Check out our website at ${user.website}.`;
 
         //Appending elements
         userInfo.appendChild(name);
         userInfo.appendChild(userName);
-
+        userInfo.appendChild(intro);
         profileContainer.appendChild(profilePic);
         profileContainer.appendChild(userInfo);
-    })
+    });
 });
 

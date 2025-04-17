@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be Social</title>
-
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/profileStyling.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <script src="../scripts/API.js" type="module" defer></script>
     <script src="../scripts/profile.js" type="module" defer></script>
     <script src="../scripts/sideBar.js" type="module" defer></script>
 </head>
 <body>
-    <aside id="sidebar">
-        <ul id="sidebarUl"></ul>
-    </aside>
     <div id="profile">
-        <header id="profile-header"></header>
+        <header id="profile-header">
+            <h1>Be Social</h1>
+        </header>
+        <aside id="sidebar">
+            <h2 id="sidebar-heading">Contacts</h2>
+            <ul id="sidebarUl"></ul>
+        </aside>
+        <section id="profile-section"></section>
         <main id="profile-main">
             <div id="btn-container">
                 <button id="profile-btn">Profile</button>
