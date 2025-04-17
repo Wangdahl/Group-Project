@@ -1,10 +1,14 @@
-import { getUsers, getImages} from './API.js';
+import { getUsers, getImages } from './API.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const parentDiv = document.getElementById('user-box');
     
     getUsers().then(users => {
         users.forEach(user => {
+            // Storing ID in variable
+            const userId = user.id;
+
+            // Creating elements
             const newDiv = document.createElement('div');
             const newDiv2 = document.createElement('div');
             const newDiv3 = document.createElement('div');
@@ -28,18 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
             newImg.classList.add('profile-pic');
             newButton.classList.add('address-button');
 
+            // Assigning the user id as id to the parent div
+            newDiv.id = userId.toString();
             //Assigning info from api to elements.
             newH3.textContent = user.name;
             newH4.textContent = `@${user.username}`;
             newP.textContent = user.email;
-            newButton.textContent = 'Show address';
+            newButton.textContent = 'View Profile';
             newLi1.textContent = user.address.city;
             newLi2.textContent = user.phone;
             newLi3.textContent = user.company.name;
 
             //Adding event listener to button for show/hide logic
             newButton.addEventListener('click', () => {
-                newDiv4.classList.toggle('open');
+                localStorage.setItem('id', userId);
+                window.location.href = '../pages/profile.html';
             });
 
             //PLACEHOLDER IMG 
