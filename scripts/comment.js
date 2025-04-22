@@ -1,24 +1,34 @@
-async function getComment() {
+export async function getComments(postId) {
 	const url = "https://jsonplaceholder.typicode.com/comments";
 
 	try {
 		const response = await fetch(url);
-		//If response is not ok throw error
 		if (!response.ok) {
 			throw new Error(`Response status: ${response.status}`);
 		}
-		const json = await response.json();
-		//Return json object
-		return json;
+		const comments = await response.json();
+		// Filter comments by postId
+		const filteredComments = comments.filter(
+			(comment) => comment.postId === postId
+		);
+		return filteredComments;
 	} catch (error) {
 		console.error(error.message);
+		return [];
 	}
 }
 
-//get comments for post id === 4 (change for post.id)
-getComment().then((comments) => {
-	const filteredComments = comments.filter((comment) => comment.postId === 4);
-	filteredComments.forEach((comment) => {
-		console.log(comment);
-	});
-});
+// Example usage:
+/* 
+getComments(1).then(comments => {
+    comments.forEach(comment => {
+        console.log(`
+            Post ID: ${comment.postId}
+            Comment ID: ${comment.id}
+            Name: ${comment.name}
+            Email: ${comment.email}
+            Body: ${comment.body}
+        `);
+    });
+}); 
+*/
