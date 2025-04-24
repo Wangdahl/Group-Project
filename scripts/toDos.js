@@ -1,6 +1,6 @@
 
-
-
+const usersId = localStorage.getItem('id');
+console.log(usersId);
 let toDoArray = [];
 fetch('https://jsonplaceholder.typicode.com/todos')
 .then(response => response.json())
@@ -8,11 +8,10 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 .catch(error => console.error('Error', error));
 
 const toDosContainer = document.querySelector('.todo-container');
-const profileName = document.querySelector('.profile-name');
 const toDoElement = document.querySelector('.to-do');
 function clickedUser(users){
     toDoArray.forEach(toDosData => {
-        if(toDosData.userId == users.id){
+        if(toDosData.userId == usersId){
             console.log(users.id);
             toDosContainer.innerHTML = '';
 
