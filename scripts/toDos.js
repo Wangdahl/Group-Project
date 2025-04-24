@@ -1,26 +1,30 @@
 
 const usersId = localStorage.getItem('id');
-console.log(usersId);
+console.log(Number(usersId));
 let toDoArray = [];
 fetch('https://jsonplaceholder.typicode.com/todos')
 .then(response => response.json())
-.then(data =>{ toDoArray = data})
+.then(data =>{ toDoArray = data
+    console.log("Todos fetched and stored.");
+})
 .catch(error => console.error('Error', error));
 
-const toDosContainer = document.querySelector('.todo-container');
-const toDoElement = document.querySelector('.to-do');
-function clickedUser(users){
-    toDoArray.forEach(toDosData => {
-        if(toDosData.userId == usersId){
-            console.log(users.id);
-            toDosContainer.innerHTML = '';
 
-            toDoElement.addEventListener('click',()=>{
+const toDosContainer = document.getElementById('todo-container');
+const toDoElement = document.getElementById('to-do-btn');
+toDoElement.addEventListener('click',()=>{
+    toDosContainer.innerHTML = '';
+    toDoArray.forEach(toDosData => {
+        if(toDosData.userId == Number(usersId)){
+                console.log(toDosData.userId);
+                console.log(usersId);
+                console.log(toDosData);
                 const content = document.createElement('div');
                 const title = document.createElement('h1');
                 const completed = document.createElement('p');
-                title.classList.add('title');
-                completed.classList.add('completed');
+                content.id = 'todo-content';
+                title.id = 'todo-title';
+                completed.id = 'todo-task';
                 title.textContent = toDosData.title;
                 if(toDosData.completed == false){
                     completed.textContent = '❌';
@@ -31,10 +35,10 @@ function clickedUser(users){
                 toDosContainer.appendChild(content);
                 content.appendChild(title);
                 content.appendChild(completed);
-            })
-        };
+            }
+        });
     });
-};
+
 
 
 
