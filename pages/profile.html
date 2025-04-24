@@ -41,4 +41,29 @@
 		<script src="../scripts/comment.js" type="module" defer></script>
 		<script src="../scripts/createComments.js" type="module" defer></script>
 	</body>
+    <script src="../scripts/API.js" type="module" defer></script>
+    <script src="../scripts/profile.js" type="module" defer></script>
+    <script src="../scripts/sideBar.js" type="module" defer></script>
+    <script src="../scripts/posts.js" defer></script>
+</head>
+<body>
+    <div id="profile">
+        <header id="profile-header">
+            <h1 id="profile-h1">Be Social</h1>
+        </header>
+        <aside id="sidebar">
+            <h2 id="sidebar-heading">Contacts</h2>
+            <ul id="sidebarUl"></ul>
+        </aside>
+        <section id="profile-section"></section>
+        <main id="profile-main">
+            <div id="btn-container">
+                <button id="profile-btn">Profile</button>
+                <button id="post-btn" onclick="renderPosts()">Posts</button>
+                <button id="to-do-btn">To do's</button>
+            </div>
+            <section id="posts-section"></section>
+        </main>
+    </div>
+</body>
 </html>
