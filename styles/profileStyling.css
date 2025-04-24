@@ -86,3 +86,8 @@
 .sidebar-name {
     font-weight: 600;
 }
+
+/*posts styling*/
+.posts-div{
+    margin: 0 50px;
+}

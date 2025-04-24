@@ -12,6 +12,7 @@
     <script src="../scripts/API.js" type="module" defer></script>
     <script src="../scripts/profile.js" type="module" defer></script>
     <script src="../scripts/sideBar.js" type="module" defer></script>
+    <script src="../scripts/posts.js" defer></script>
     
     <script src="../scripts/toDos.js" type="module"></script>
 </head>
@@ -28,9 +29,10 @@
         <main id="profile-main">
             <div id="btn-container">
                 <button id="profile-btn">Profile</button>
-                <button id="post-btn">Posts</button>
+                <button id="post-btn" onclick="renderPosts()">Posts</button>
                 <button id="to-do-btn">To do's</button>
             </div>
+            <section id="posts-section"></section>
         </main>
     </div>
 </body>
