@@ -1,115 +1,156 @@
 /* Reset */
-*, body, html {
-    box-sizing: border-box;
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    scrollbar-gutter: stable;
+*,
+body,
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	scrollbar-gutter: stable;
 }
 /* Page wide */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 h1 {
-    font-size: 1.75rem;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    font-family: 'Luckiest Guy', cursive;
-    color: lightcoral;
+	font-size: 1.75rem;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	font-family: "Luckiest Guy", cursive;
+	color: lightcoral;
 }
 h2 {
-    font-size: 2rem;
-    margin: 2rem 0 3rem;
-    color: lightcoral;
-    
+	font-size: 2rem;
+	margin: 2rem 0 3rem;
+	color: lightcoral;
 }
 h3 {
-    font-size:1.2rem;
+	font-size: 1.2rem;
 }
 h4 {
-    font-size: 0.8rem;
-    padding-bottom: 0.5rem;
+	font-size: 0.8rem;
+	padding-bottom: 0.5rem;
 }
 p {
-    font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 button {
-    max-width: 200px;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-family: 'Luckiest Guy', cursive;
-    box-shadow: 0 0 5px lightcoral;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+	max-width: 200px;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-family: "Luckiest Guy", cursive;
+	box-shadow: 0 0 5px lightcoral;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 .users {
-    margin: 1rem;
+	margin: 1rem;
 }
 /* Contact card styling */
 .contact-card {
-    margin: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 5px lightcoral;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 350px;
-    justify-self: center;
-    overflow: none;
+	margin: 1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 0 5px lightcoral;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 350px;
+	justify-self: center;
+	overflow: none;
 }
 .contact-card button {
-    justify-self: center;
-    margin-bottom: 1rem;
+	justify-self: center;
+	margin-bottom: 1rem;
 }
 .profile {
-    display: flex;
-    justify-content: flex-start;
-    overflow: none;
-    width: 100%;
-    padding: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	overflow: none;
+	width: 100%;
+	padding: 1rem;
 }
 .profile-pic {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 25px;
-    margin-right: 1.5rem;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 25px;
+	margin-right: 1.5rem;
 }
 .details {
-    word-break: break-word;
+	word-break: break-word;
 }
 .address-box {
-    width: 100%;
-    padding: 1rem;
+	width: 100%;
+	padding: 1rem;
 }
 .address-box ul li {
-    list-style: none;
-    padding-bottom: 3px;
+	list-style: none;
+	padding-bottom: 3px;
 }
 
 /* Show / hide address */
 .hide {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s ease;
-    padding: 0 1rem;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	padding: 0 1rem;
 }
 .hide.open {
-    max-height: 1000px;
-    padding: 1rem;
-    transition: all 0.5s ease;
+	max-height: 1000px;
+	padding: 1rem;
+	transition: all 0.5s ease;
 }
 
-footer {
-    padding: 1rem;
-    font-size: 0.8rem;
-    bottom: 0;
+/* Update existing styles */
+.posts-div {
+	box-shadow: 0 0 5px lightcoral;
+	border-radius: 2rem;
+	padding: 1.5rem;
+	margin: 2rem;
+	position: relative;
+}
+
+/* Add new styles */
+#commentBtn {
+	position: absolute;
+	bottom: -0.5rem;
+	right: 3rem;
+	background-color: white;
+	transition: transform 0.2s ease;
+}
+
+#commentBtn:hover {
+	transform: scale(1.05);
+}
+
+.comment {
+	margin: 1rem 2rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 5px lightcoral;
+	background-color: rgba(240, 128, 128, 0.05);
+}
+
+.comment b {
+	color: lightcoral;
+	font-size: 0.9rem;
+}
+
+#commentBody {
+	margin-top: 0.5rem;
+	line-height: 1.4;
+	color: #333;
+}
+
+#postsId {
+	margin: 2rem 1rem;
+	position: relative;
 }

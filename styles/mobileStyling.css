@@ -1,0 +1,44 @@
+/* Mobil specifik styling */
+@media (max-width: 1080px) {
+    /* Main container */
+    #profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Header styling */
+    header {
+        justify-content: space-between;
+    }
+    #menu-toggle {
+        margin-left: 2rem;
+        box-shadow: none;
+    }
+    #menu-toggle i {
+        color: lightcoral;
+        font-size: 1.5rem;
+    }
+    /* Converting sidebar to colapsible menu & styling it*/
+    #sidebar {
+        position: fixed;
+        z-index: 2;
+        top: 4rem;
+        left: 0;
+        transform: translateX(-110%);
+        transition: transform 0.3s ease-in-out;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 0 5px lightcoral;
+    }
+    #sidebar.open {
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #profile-section {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 2rem;
+    }
+}
