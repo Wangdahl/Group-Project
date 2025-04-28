@@ -34,10 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
         intro.classList.add('introduction');
 
         //Assigning content to elements
-        profilePic.src = '../images/profile-placeholder.jpg';
         name.textContent = user.name;
         userName.textContent = `@${user.username}`;
         intro.textContent = `I work at ${user.company.name}, where our motto is "${user.company.catchPhrase}". You can reach me at ${user.email} or give me a call at ${user.phone}. Check out our website at ${user.website}.`;
+        //Checking for profile pic in localStorage
+        const storedPic = localStorage.getItem(`img_${userId}`);
+        if (storedPic) {
+            profilePic.src = storedPic;
+        } else {
+            profilePic.src = '../images/profile-placeholder.jpg';
+        }
 
         //Appending elements
         userInfo.appendChild(name);
