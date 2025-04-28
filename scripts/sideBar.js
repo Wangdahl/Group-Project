@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             span.classList.add('sidebar-name');
             
             //Assigning content to elements
+            //loading profile pic from local storage if exists otherwise placeholder
             const storedPic = localStorage.getItem(`img_${userId}`);
             if (storedPic) {
                 img.src = storedPic;
