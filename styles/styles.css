@@ -109,25 +109,48 @@ a {
 	transition: all 0.5s ease;
 }
 
-/* Added display none to not interfear with other coding on the page. */
-.comment {
-	margin: 1rem;
-	padding: 1rem;
-	border-radius: 5px;
+/* Update existing styles */
+.posts-div {
 	box-shadow: 0 0 5px lightcoral;
-	display: none;
+	border-radius: 2rem;
+	padding: 1.5rem;
+	margin: 2rem;
+	position: relative;
 }
 
-#comments-container {
-	margin: 2rem;
-	grid-column: 2/3;
+/* Add new styles */
+#commentBtn {
+	position: absolute;
+	bottom: -0.5rem;
+	right: 3rem;
+	background-color: white;
+	transition: transform 0.2s ease;
+}
+
+#commentBtn:hover {
+	transform: scale(1.05);
+}
+
+.comment {
+	margin: 1rem 2rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 5px lightcoral;
+	background-color: rgba(240, 128, 128, 0.05);
+}
+
+.comment b {
+	color: lightcoral;
+	font-size: 0.9rem;
 }
 
 #commentBody {
 	margin-top: 0.5rem;
+	line-height: 1.4;
+	color: #333;
 }
-footer {
-	padding: 1rem;
-	font-size: 0.8rem;
-	bottom: 0;
+
+#postsId {
+	margin: 2rem 1rem;
+	position: relative;
 }
