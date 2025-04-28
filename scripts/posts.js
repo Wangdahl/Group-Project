@@ -24,7 +24,7 @@ function renderPosts() {
     const posts = getpost().then((posts) => {
         const results = posts.filter((post) => post.userId === userId);
         console.log(results)
-        posts.forEach(post => {
+        results.forEach(post => {
             const block = document.createElement("div")
             block.innerHTML = `<div class="posts-div">${post.title}</div>`
             container.appendChild(block)
