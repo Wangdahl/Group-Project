@@ -75,6 +75,7 @@
     border-radius: 2rem;
     padding: 5px;
     cursor: pointer;
+    padding-right: 15px;
 }
 .sidebar-pic {
     max-width: 40px;
@@ -85,4 +86,9 @@
 }
 .sidebar-name {
     font-weight: 600;
+}
+
+/*posts styling*/
+.posts-div{
+    margin: 0 50px;
 }
