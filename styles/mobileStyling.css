@@ -1,5 +1,5 @@
 /* Mobil specifik styling */
-@media (max-width: 1080px) {
+@media (max-width: 1085px) {
     /* Main container */
     #profile {
         display: flex;
@@ -11,6 +11,7 @@
         justify-content: space-between;
     }
     #menu-toggle {
+        display: block;
         margin-left: 2rem;
         box-shadow: none;
     }
