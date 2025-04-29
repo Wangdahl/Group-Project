@@ -1,11 +1,11 @@
 
 const usersId = localStorage.getItem('id');
-console.log(Number(usersId));
+
 let toDoArray = [];
 fetch('https://jsonplaceholder.typicode.com/todos')
 .then(response => response.json())
 .then(data =>{ toDoArray = data
-    console.log("Todos fetched and stored.");
+    
 })
 .catch(error => console.error('Error', error));
 
@@ -18,9 +18,6 @@ toDoElement.addEventListener('click',()=>{
     toDosContainer.innerHTML = '';
     toDoArray.forEach(toDosData => {
         if(toDosData.userId == Number(usersId)){
-                console.log(toDosData.userId);
-                console.log(usersId);
-                console.log(toDosData);
                 const content = document.createElement('div');
                 const title = document.createElement('p');
                 const completed = document.createElement('p');

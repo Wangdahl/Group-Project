@@ -49,8 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = '../pages/profile.html';
             });
 
-            //PLACEHOLDER IMG 
-            newImg.src = '../images/profile-placeholder.jpg'
             //Adding elements to details div
             newDiv3.appendChild(newH3);
             newDiv3.appendChild(newH4);
@@ -70,15 +68,27 @@ document.addEventListener('DOMContentLoaded', () => {
             newDiv.appendChild(newDiv4);
             //Adding the div containing all contents to the section
             parentDiv.appendChild(newDiv);
-            
-            
-            //Fetching image for profile pic 
-            //getImages().then(image => {
-                //newImg.src = image.urls.small;;
-
-            //}).catch(error => {
-            //    console.error('Image fetch failed: ', error);
-            //});
+                        
+            //Checking if profile pic exists in localstorage, 
+            // otherwise fetch from Unsplash API 
+            const storedProfilePic = localStorage.getItem(`img_${userId}`);
+            if (storedProfilePic) {
+                newImg.src = storedProfilePic;
+            } else {
+                getImages().then(image => {
+                    const profilePicUrl = image.urls.small;
+                    newImg.src = profilePicUrl;
+                    try {
+                        localStorage.setItem(`img_${userId}`, profilePicUrl);
+                    } catch (e) {
+                        console.warn('Could not save image to localStorage', e)
+                    }
+                }).catch(error => {
+                    console.error('Image fetch failed: ', error);
+                    //PLACEHOLDER IMG 
+                    newImg.src = '../images/profile-placeholder.jpg'
+                });
+            }
         })
     }).catch(error => {
         console.error('User fetch failed: ', error);
