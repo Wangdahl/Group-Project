@@ -121,7 +121,7 @@ a {
 /* Add new styles */
 #commentBtn {
 	position: absolute;
-	bottom: -0.5rem;
+	bottom: -1.5rem;
 	right: 3rem;
 	background-color: white;
 	transition: transform 0.2s ease;
