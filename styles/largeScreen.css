@@ -12,6 +12,9 @@
     #user-box {
         grid-template-columns: repeat(3, 1fr);
     }
+    #menu-toggle {
+        display: none;
+    }
 }
 @media (min-width: 1300px) {
     #user-box {

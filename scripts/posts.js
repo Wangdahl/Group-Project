@@ -14,11 +14,12 @@ async function getpost() {
 		console.error(error.message);
 	}
 }
-
+const toDosContainer = document.getElementById('todo-container');
 function renderPosts() {
 	const container = document.getElementById("posts-section");
 	const userId = Number(localStorage.getItem("id"));
 	const posts = getpost().then((posts) => {
+		toDosContainer.innerHTML = '';
 		container.innerHTML = "";
 		const results = posts.filter((post) => post.userId === userId);
 		results.forEach((post) => {

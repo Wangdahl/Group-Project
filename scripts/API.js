@@ -1,4 +1,4 @@
-// import { UNSPLASH_API_KEY } from '../env.js'
+import { UNSPLASH_API_KEY } from '../env.js'
 
 //Getting users from jsonplaceholder
 export async function getUsers() {
