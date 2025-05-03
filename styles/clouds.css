@@ -1,0 +1,71 @@
+/*moln effekt*/
+/*"reset" och basstil"*/
+html, body {
+	height: 100%;
+	overflow-x: hidden;   
+}
+
+body {
+	position: relative; 
+	background-color: #fff;
+}
+
+/*moln-effekt*/
+.clouds-div{
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+	height: 100%;
+	z-index: 0; /*längst bak*/
+	pointer-events: none; /*klick går igenom molnen*/
+}
+
+.cloud{
+	position: absolute;
+	width: 300px; 
+	height: 90px;
+	background: #f8c6c6;
+	border-radius: 50px;
+	box-shadow:
+	45px -35px 0 #f8c6c6,
+	90px  20px 0 #f8c6c6,
+	135px -10px 0 #f8c6c6;
+	opacity: 0.6;
+	animation-name: moveClouds;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	pointer-events: none;
+}
+
+/*startposition molnet*/
+.cloud1{
+	left: -350px;
+	top: 15%;
+	animation-duration: 60s;
+}
+
+@keyframes moveClouds {
+	from { transform: translateX(0); }
+	to   { transform: translateX(120vw); }
+}
+
+#profile{
+	position: relative;
+	z-index: 1; /*ligger ovanpå molnen*/
+}
+
+/*ordna huvudinnehållet*/
+.users{
+	padding: 2rem;
+    background-color: #fff;
+}
+
+#user-box{
+	background: #fff;
+}
+
+#sidebarUl{
+	background: #fff;
+	border-radius: 21px;
+}
