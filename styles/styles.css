@@ -16,7 +16,15 @@ header {
 	justify-content: flex-end;
 }
 footer p {
-	padding: 0 1rem 1rem;
+	font-family: "Luckiest Guy", cursive;
+	color: #fff;
+}
+
+footer{
+	background-color: lightcoral;
+	padding: 20px;
+	text-align: center;
+	opacity: 70%;
 }
 h1 {
 	font-size: 1.75rem;
@@ -73,6 +81,11 @@ a {
 	justify-self: center;
 	margin-bottom: 1rem;
 }
+
+.contact-card button:hover{
+	transform: scale(1.05);
+}
+
 .profile {
 	display: flex;
 	justify-content: flex-start;
@@ -119,6 +132,14 @@ a {
 	padding: 1.5rem;
 	margin: 2rem;
 	position: relative;
+}
+
+#post-btn:hover{
+	transform: scale(1.05);
+}
+
+#to-do-btn:hover{
+	transform: scale(1.05);
 }
 
 /* Add new styles */
